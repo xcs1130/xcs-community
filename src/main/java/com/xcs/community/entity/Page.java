@@ -5,7 +5,7 @@ package com.xcs.community.entity;
  * @create 2020-04-20 12:05
  * 封装分页相关信息
  */
-public class Page {
+public class Page<D> {
     //当前页码
     private int current = 1;
     //显示上限
@@ -56,7 +56,7 @@ public class Page {
      * 获取当前页的起始行
      */
 
-    public int getoffset() {
+    public int getOffset() {
         //current * limit-limit
         return((current-1)*limit);
     }
